@@ -6,7 +6,7 @@
 /*   By: leldiss <leldiss@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 17:43:02 by leldiss           #+#    #+#             */
-/*   Updated: 2022/06/07 20:49:27 by leldiss          ###   ########.fr       */
+/*   Updated: 2022/06/18 10:16:31 by leldiss          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,15 @@ char	*next_command(t_execute *info, char *line)
 	{
 		while ((*line >= 9 && *line <= 13) || *line == 32)
 			line++;
-		if ((*line <= 9 && *line >= 13) || *line != 32 && *line)
-			line = isHandle(info, line);
+		if ((*line <= 9 && *line >= 13) || (*line != 32 && *line))
+			line = is_handle(info, line);
 	}
 	return (line);
 }
 
 char	*parse_pipe(t_execute *info, char	*line)
 {
-	while ((*line >= 9 && *line <= 13) || *line == 32 && *line)
+	while ((*line >= 9 && *line <= 13) || (*line == 32 && *line))
 		line++;
 	if (*line != '\0')
 		line = next_command(info, line);

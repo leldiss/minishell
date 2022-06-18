@@ -1,5 +1,5 @@
-make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/home/leldiss/minishell'
-gcc main.c star_parse.c parse_env.c parse_output.c  -lreadline -g -o a.out
-make: Leaving directory '/home/leldiss/minishell'
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/leldiss/minshell'
+make: Nothing to be done for 'all'.
+make: Leaving directory '/home/leldiss/minshell'
  
