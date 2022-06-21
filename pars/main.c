@@ -6,7 +6,7 @@
 /*   By: leldiss <leldiss@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 09:58:47 by leldiss           #+#    #+#             */
-/*   Updated: 2022/06/21 15:11:53 by leldiss          ###   ########.fr       */
+/*   Updated: 2022/06/21 17:12:41 by leldiss          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,9 +79,8 @@ int	main(int ac, char **av, char *envp[])
 	get_envp(&information, envp);
 	while (1)
 	{
-		make_signals_work();
+		make_signals_work(&information);
 		info = first_execute();
-		printdir();
 		info->info = &information;
 		line = ft_readline();
 		if (line == NULL)
