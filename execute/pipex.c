@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pipex.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbendu <sbendu@student.42.fr>              +#+  +:+       +#+        */
+/*   By: leldiss <leldiss@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/22 09:43:26 by sbendu            #+#    #+#             */
-/*   Updated: 2022/06/21 13:07:49 by sbendu           ###   ########.fr       */
+/*   Updated: 2022/06/21 17:19:52 by leldiss          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,10 +70,10 @@ int	child_process(t_execute *cmds, int fd_0, int fd_1, t_pipex *pip)
 	int	fd[2];
 	int	status;
 
-	if (fd_open(cmds, fd_0, fd_1, fd) == -1)
-		return (-1);
 	dup2(fd_0, STDIN_FILENO);
 	dup2(fd_1, STDOUT_FILENO);
+	if (fd_open(cmds, fd_0, fd_1, fd) == -1)
+		return (-1);
 	close_fd_pip(pip);
 	fd_close(fd[0], fd[1], cmds);
 	status = ft_builtins(cmds, cmds->info);
