@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   env.c                                              :+:      :+:    :+:   */
+/*   pwd.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbendu <sbendu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/31 20:59:56 by sbendu            #+#    #+#             */
-/*   Updated: 2022/06/10 19:06:36 by sbendu           ###   ########.fr       */
+/*   Created: 2022/05/31 20:21:53 by sbendu            #+#    #+#             */
+/*   Updated: 2022/06/20 20:22:37 by sbendu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../execute/execute.h"
+#include "execute.h"
 
-int	env(t_execute *cmds, t_info *info)
+int	pwd(t_info *info)
 {
-	int	i;
+	char	cwd[1024];
 
-	i = -1;
-	while (info->envp[++i])
-		printf("%s\n", info->envp[i]);
+	getcwd(cwd, sizeof(cwd));
+	printf("%s\n", cwd);
 	info->status = 0;
 	return (0);
 }

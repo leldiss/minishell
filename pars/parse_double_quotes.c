@@ -6,7 +6,7 @@
 /*   By: leldiss <leldiss@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 17:02:33 by leldiss           #+#    #+#             */
-/*   Updated: 2022/06/18 13:04:08 by leldiss          ###   ########.fr       */
+/*   Updated: 2022/06/21 11:10:35 by leldiss          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ int	final_size_dquotes(char	*line, t_execute *info)
 	int		i;
 
 	i = 0;
-	if (line[1] == '?' && line[2] == '\0'
+	if ((line[1] == '?' && line[2] == '\0')
 		|| (line[2] >= 9 && line[2] <= 13) || line[2] == 32)
 		i = status_size(info->info->status);
 	else
 	{
-		while ((*line <= 9 && *line >= 13) || *line != 32
-			&& *line && *line != '\"' && *line != '\'')
+		while ((*line <= 9 && *line >= 13) || (*line != 32
+				&& *line && *line != '\"' && *line != '\''))
 		{
 			if (*line == '$')
 			{
@@ -71,7 +71,7 @@ char	*skip_lines(t_execute *info, char *line, int *i)
 	if ((line[1] >= 9 && line[1] <= 13) || line[1] == 32
 		|| line[1] == '\0' || line[1] == '\"' || line[1] == '\'')
 		line = single_dollar(info, line, i);
-	else if (line[1] == '?' && line[2] == '\0'
+	else if ((line[1] == '?' && line[2] == '\0')
 		|| (line[2] >= 9 && line[2] <= 13)
 		|| line[2] == 32 || line[2] == '\"' || line[2] == '\'')
 		line = current_status(info, line, i);

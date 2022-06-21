@@ -2,7 +2,7 @@ NAME = minishell
 
 CC = gcc
 
-CFLAGS = -lreadline -g
+CFLAGS = -lreadline -g -Wall -Werror -Wextra
 
 INCLD =./execute/\
 
@@ -20,16 +20,28 @@ SRC = ./pars/main.c\
 		./pars/pars_utils.c\
 		./pars/pars_utils2.c\
 		./pars/pars_utils3.c\
-		# ./execute/execute.c\
+		./execute/execute.c\
 		./execute/pipex.c\
 		./execute/utils.c\
-
+		./execute/utils2.c\
+		./execute/pwd.c\
+		./execute/builtinsutils.c\
+		./execute/cd.c\
+		./execute/echo.c\
+		./execute/env.c\
+		./execute/exit.c\
+		./execute/export.c\
+		./execute/unset.c\
+		./execute/signal.c\
+		./execute/path.c\
+		./execute/utils3.c\
+		./execute/ft_split.c\
 
 OBJ = $(SRC:.c=.o)
 
 all:	$(NAME)
 
-$(NAME):	$(OBJ) 
+$(NAME): $(OBJ)
 	$(CC) $^ -o $@ $(CFLAGS) -o $(NAME)
 
 %.o: %.c  $(INCLD) $(SRC)

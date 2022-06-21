@@ -6,7 +6,7 @@
 /*   By: leldiss <leldiss@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 13:58:42 by leldiss           #+#    #+#             */
-/*   Updated: 2022/06/18 13:17:05 by leldiss          ###   ########.fr       */
+/*   Updated: 2022/06/21 11:10:46 by leldiss          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,13 +84,13 @@ int	final_size_env(char	*line, t_execute *info)
 	int		i;
 
 	i = 0;
-	if (line[1] == '?' && line[2] == '\0'
+	if ((line[1] == '?' && line[2] == '\0')
 		|| (line[2] >= 9 && line[2] <= 13) || line[2] == 32)
 		i = status_size(info->info->status);
 	else
 	{
-		while ((*line <= 9 && *line >= 13) || *line != 32
-			&& *line && *line != '\'' && *line != '\"')
+		while ((*line <= 9 && *line >= 13) || (*line != 32
+				&& *line && *line != '\'' && *line != '\"'))
 		{
 			if (*line == '$')
 			{

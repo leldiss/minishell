@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: leldiss <leldiss@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: sbendu <sbendu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 00:23:14 by sbendu            #+#    #+#             */
-/*   Updated: 2022/06/14 20:31:37 by leldiss          ###   ########.fr       */
+/*   Updated: 2022/06/20 14:12:32 by sbendu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@ int	ft_error(char *cmd, char *mess)
 	write(2, cmd, ft_strlen(cmd));
 	write(2, mess, ft_strlen(mess));
 	write(2, "\n", 1);
-	return (-1);
+	return (1);
 }
 
 void	fd_close(int fd_0, int fd_1, t_execute *cmds)
 {
-	if (cmds->stdIn != 0 || cmds->stdIn2 != 0)
+	if (cmds->stdin != 0 || cmds->stdin2 != 0)
 		close(fd_0);
-	if (cmds->stdOut != 0 || cmds->stdOut2 != 0)
+	if (cmds->stdout != 0 || cmds->stdout2 != 0)
 		close(fd_1);
 }
 
@@ -57,20 +57,11 @@ int	init_pip(t_pipex *pip)
 	i = -1;
 	pip->pipe_fd = malloc(sizeof(int) * pip->num_pipes * 2);
 	if (!pip->pipe_fd)
-		return (-1);
+		return (1);
 	while (++i < pip->num_pipes)
 		if (pipe(pip->pipe_fd + i * 2) == -1)
-			return (-1);
-	pip->pid = malloc(sizeof(int) * (pip->num_pipes + 1));
+			return (1);
+	pip->pid = malloc(sizeof(int) * (pip->num_pipes + 2));
+	pip->pid[pip->num_pipes + 1] = 0;
 	return (0);
-}
-
-int ft_arg_len(char **arg)
-{
-	int	i;
-
-	i = 0;
-	while (arg[i])
-		i++;
-	return (i);
 }

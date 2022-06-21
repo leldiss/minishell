@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pwd.c                                              :+:      :+:    :+:   */
+/*   cd.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbendu <sbendu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/31 20:21:53 by sbendu            #+#    #+#             */
-/*   Updated: 2022/06/10 19:06:38 by sbendu           ###   ########.fr       */
+/*   Created: 2022/06/01 09:38:55 by sbendu            #+#    #+#             */
+/*   Updated: 2022/06/21 09:16:07 by sbendu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../execute/execute.h"
+#include "execute.h"
 
-int	pwd(t_execute *cmds, t_info *info)
+int	cd(t_execute *cmds, t_info *info)
 {
-	char	cwd[1024];
+	int	status;
 
-	getcwd(cwd, sizeof(cwd));
-	printf("%s\n", cwd);
-	info->status = 0;
-	return(0);
+	if (ft_arg_len(cmds->arguments) > 2)
+		return (ft_error("cd: ", "too many arguments"));
+	status = chdir(cmds->arguments[1]);
+	if (status == -1)
+	{
+		info->status = 1;
+		return (ft_error(cmds->arguments[1], ": No such file or directory"));
+	}
+	else
+		info->status = 0;
+	return (0);
 }

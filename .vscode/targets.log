@@ -5,8 +5,9 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
+ 
 
-# Make data base, printed on Sat Jun 18 13:18:43 2022
+# Make data base, printed on Tue Jun 21 10:33:40 2022
 
 # Variables
 
@@ -18,10 +19,10 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 WSLENV = ELECTRON_RUN_AS_NODE/w:WT_SESSION::WT_PROFILE_ID
 # default
 .SHELLFLAGS := -c
-# makefile (from 'Makefile', line 28)
+# makefile (from 'Makefile', line 40)
 OBJ = $(SRC:.c=.o)
 # makefile (from 'Makefile', line 9)
-SRC = ./pars/main.c ./pars/free_structure.c ./pars/initialize_structure.c ./pars/parse_double_quotes.c ./pars/parse_env.c ./pars/parse_input.c ./pars/parse_output.c ./pars/parse_pipe.c ./pars/parse_quotes.c ./pars/start_parse.c ./pars/env_utils.c ./pars/pars_utils.c ./pars/pars_utils2.c ./pars/pars_utils3.c 
+SRC = ./pars/main.c ./pars/free_structure.c ./pars/initialize_structure.c ./pars/parse_double_quotes.c ./pars/parse_env.c ./pars/parse_input.c ./pars/parse_output.c ./pars/parse_pipe.c ./pars/parse_quotes.c ./pars/start_parse.c ./pars/env_utils.c ./pars/pars_utils.c ./pars/pars_utils2.c ./pars/pars_utils3.c ./execute/execute.c ./execute/pipex.c ./execute/utils.c ./execute/utils2.c ./execute/pwd.c ./execute/builtinsutils.c ./execute/cd.c ./execute/echo.c ./execute/env.c ./execute/exit.c ./execute/export.c ./execute/unset.c ./execute/signal.c ./execute/path.c ./execute/utils3.c ./execute/ft_split.c 
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
@@ -39,7 +40,7 @@ VSCODE_NLS_CONFIG = {"locale":"ru","availableLanguages":{"*":"ru"},"_languagePac
 # environment
 _ = /mnt/c/Users/Uran/AppData/Local/Programs/Microsoft VS Code/bin/code
 # makefile (from 'Makefile', line 5)
-CFLAGS = -lreadline -g
+CFLAGS = -lreadline -g -Wall -Werror -Wextra
 # makefile (from 'Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
 # 'override' directive
@@ -59,7 +60,7 @@ XDG_RUNTIME_DIR = /mnt/wslg/runtime-dir
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-2bef874d-b1c5-46c6-9bfb-de972752b2b9.sock
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-256afb66-099f-4e96-9e0e-507765ec58af.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -75,11 +76,11 @@ PWD = /home/leldiss/minshell
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/209_interop
+WSL_INTEROP = /run/WSL/212_interop
 # environment
 PULSE_SERVER = /mnt/wslg/PulseServer
 # environment
-WT_SESSION = 2af2375f-141d-47ab-8568-fd443601c7b8
+WT_SESSION = 622f511a-d7c5-4d9b-a271-d165a319112d
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -87,7 +88,7 @@ HOME = /home/leldiss
 # environment
 LOGNAME = leldiss
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 ZSH = /home/leldiss/.oh-my-zsh
 # environment
@@ -171,7 +172,7 @@ VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # environment
 WSL_DISTRO_NAME = Ubuntu
 # variable set hash-table stats:
-# Load=80/1024=8%, Rehash=0, Collisions=6/112=5%
+# Load=80/1024=8%, Rehash=0, Collisions=6/118=5%
 
 # Pattern-specific Variable Values
 
@@ -179,16 +180,16 @@ WSL_DISTRO_NAME = Ubuntu
 
 # Directories
 
-# . (device 2080, inode 57994): 12 files, no impossibilities.
-# pars (device 2080, inode 62444): 31 files, no impossibilities so far.
-# execute (device 2080, inode 62437): No files, no impossibilities so far.
+# . (device 2080, inode 57994): 8 files, no impossibilities.
+# pars (device 2080, inode 62451): 31 files, no impossibilities so far.
+# execute (device 2080, inode 62429): 33 files, no impossibilities so far.
 
-# 43 files, no impossibilities in 3 directories.
+# 72 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
-%.o: %.c execute/ pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c
-#  recipe to execute (from 'Makefile', line 36):
+%.o: %.c execute/ pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
+#  recipe to execute (from 'Makefile', line 48):
 	$(CC) $(CFLAGS) -I $(INCLD) -c $< -o $(<:.c=.o)
 
 # 1 implicit rules, 0 (0.0%) terminal.
@@ -196,18 +197,30 @@ WSL_DISTRO_NAME = Ubuntu
 # Files
 
 # Not a target:
+execute/builtinsutils.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 pars/parse_input.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-18 13:03:01.509788988
+#  Last modified 2022-06-21 10:04:35.979682216
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 pars/pars_utils3.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-18 13:17:39.37792098
+#  Last modified 2022-06-21 10:04:35.979682216
 #  File has been updated.
 #  Successfully updated.
+
+# Not a target:
+execute/utils2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 all: minishell
 #  Phony target (prerequisite of .PHONY).
@@ -215,12 +228,14 @@ all: minishell
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/6=0%
 
 # Not a target:
 pars/pars_utils.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-18 13:05:34.956404985
+#  Last modified 2022-06-21 10:04:35.979682216
 #  File has been updated.
 #  Successfully updated.
 
@@ -229,142 +244,234 @@ pars/pars_utils.c:
 #  Modification time never checked.
 #  File has not been updated.
 
-pars/pars_utils2.o: pars/pars_utils2.c execute/ pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c
+# Not a target:
+execute/env.c:
 #  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'pars/pars_utils2'
-#  Last modified 2022-06-18 13:18:26.780758993
+#  Last modified 2022-06-21 10:04:35.979682216
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 36):
-	$(CC) $(CFLAGS) -I $(INCLD) -c $< -o $(<:.c=.o)
 
 # Not a target:
-Makefile:
+execute/exit.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-18 13:18:21.250758999
+#  Last modified 2022-06-21 10:04:35.979682216
 #  File has been updated.
 #  Successfully updated.
 
-pars/main.o: pars/main.c execute/ pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'pars/main'
-#  Last modified 2022-06-18 13:18:26.350758994
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 36):
-	$(CC) $(CFLAGS) -I $(INCLD) -c $< -o $(<:.c=.o)
+# Not a target:
+pars/pars_utils2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
-pars/free_structure.o: pars/free_structure.c execute/ pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'pars/free_structure'
-#  Last modified 2022-06-18 13:18:26.450758994
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 36):
-	$(CC) $(CFLAGS) -I $(INCLD) -c $< -o $(<:.c=.o)
-
-pars/start_parse.o: pars/start_parse.c execute/ pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'pars/start_parse'
-#  Last modified 2022-06-18 13:18:26.720758993
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 36):
-	$(CC) $(CFLAGS) -I $(INCLD) -c $< -o $(<:.c=.o)
-
- 
-pars/parse_double_quotes.o: pars/parse_double_quotes.c execute/ pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'pars/parse_double_quotes'
-#  Last modified 2022-06-18 13:18:26.600758993
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 36):
-	$(CC) $(CFLAGS) -I $(INCLD) -c $< -o $(<:.c=.o)
+# Not a target:
+execute/path.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 execute/:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-14 20:09:12.509997567
+#  Last modified 2022-06-21 10:33:38.229833246
 #  File has been updated.
 #  Successfully updated.
 
-pars/initialize_structure.o: pars/initialize_structure.c execute/ pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'pars/initialize_structure'
-#  Last modified 2022-06-18 13:18:26.570758993
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 36):
-	$(CC) $(CFLAGS) -I $(INCLD) -c $< -o $(<:.c=.o)
-
-pars/parse_pipe.o: pars/parse_pipe.c execute/ pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'pars/parse_pipe'
-#  Last modified 2022-06-18 13:18:26.680758993
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 36):
-	$(CC) $(CFLAGS) -I $(INCLD) -c $< -o $(<:.c=.o)
-
-minishell: pars/main.o pars/free_structure.o pars/initialize_structure.o pars/parse_double_quotes.o pars/parse_env.o pars/parse_input.o pars/parse_output.o pars/parse_pipe.o pars/parse_quotes.o pars/start_parse.o pars/env_utils.o pars/pars_utils.o pars/pars_utils2.o pars/pars_utils3.o
+# Not a target:
+execute/execute.o:
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-18 13:18:26.840758993
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-21 10:33:35.969833215
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 33):
+
+# Not a target:
+execute/unset.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-21 10:04:35.979682216
+#  File has been updated.
+#  Successfully updated.
+
+ 
+pars/main.o: pars/main.c execute/ pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'pars/main'
+#  Last modified 2022-06-21 10:33:37.669833238
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := pars/main.o
+# automatic
+# % := 
+# automatic
+# * := pars/main
+# automatic
+# + := pars/main.c execute/ pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
+# automatic
+# | := 
+# automatic
+# < := pars/main.c
+# automatic
+# ^ := pars/main.c execute/ pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
+# automatic
+# ? := execute/
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/16=6%
+#  recipe to execute (from 'Makefile', line 48):
+	$(CC) $(CFLAGS) -I $(INCLD) -c $< -o $(<:.c=.o)
+
+# Not a target:
+pars/free_structure.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+pars/start_parse.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+execute/pipex.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+execute/pwd.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+execute/builtinsutils.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-21 10:04:35.979682216
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+execute/cd.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+pars/parse_double_quotes.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+execute/utils2.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-21 10:04:35.979682216
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+pars/initialize_structure.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+pars/parse_pipe.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+minishell: pars/main.o pars/free_structure.o pars/initialize_structure.o pars/parse_double_quotes.o pars/parse_env.o pars/parse_input.o pars/parse_output.o pars/parse_pipe.o pars/parse_quotes.o pars/start_parse.o pars/env_utils.o pars/pars_utils.o pars/pars_utils2.o pars/pars_utils3.o execute/execute.o execute/pipex.o execute/utils.o execute/utils2.o execute/pwd.o execute/builtinsutils.o execute/cd.o execute/echo.o execute/env.o execute/exit.o execute/export.o execute/unset.o execute/signal.o execute/path.o execute/utils3.o execute/ft_split.o
+#  Implicit rule search has not been done.
+#  Last modified 2022-06-21 10:33:38.279833246
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/6=0%
+#  recipe to execute (from 'Makefile', line 45):
 	$(CC) $^ -o $@ $(CFLAGS) -o $(NAME)
 
-pars/parse_output.o: pars/parse_output.c execute/ pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'pars/parse_output'
-#  Last modified 2022-06-18 13:18:26.660758993
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 36):
-	$(CC) $(CFLAGS) -I $(INCLD) -c $< -o $(<:.c=.o)
+# Not a target:
+execute/echo.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+pars/parse_output.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+execute/ft_split.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 fclean: clean
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 42):
+#  recipe to execute (from 'Makefile', line 54):
 	rm -rf $(NAME)
+
+# Not a target:
+execute/utils3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+execute/export.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 pars/start_parse.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-18 13:05:18.86495697
+#  Last modified 2022-06-21 10:04:35.979682216
 #  File has been updated.
 #  Successfully updated.
 
-pars/parse_env.o: pars/parse_env.c execute/ pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'pars/parse_env'
-#  Last modified 2022-06-18 13:18:26.620758993
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 36):
-	$(CC) $(CFLAGS) -I $(INCLD) -c $< -o $(<:.c=.o)
+# Not a target:
+pars/parse_env.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
-pars/env_utils.o: pars/env_utils.c execute/ pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c
+# Not a target:
+execute/path.c:
 #  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'pars/env_utils'
-#  Last modified 2022-06-18 13:18:26.740758993
+#  Last modified 2022-06-21 10:04:35.979682216
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 36):
-	$(CC) $(CFLAGS) -I $(INCLD) -c $< -o $(<:.c=.o)
 
-pars/parse_quotes.o: pars/parse_quotes.c execute/ pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'pars/parse_quotes'
-#  Last modified 2022-06-18 13:18:26.700758993
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 36):
-	$(CC) $(CFLAGS) -I $(INCLD) -c $< -o $(<:.c=.o)
+# Not a target:
+pars/env_utils.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+execute/utils.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+pars/parse_quotes.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 .DEFAULT:
@@ -373,27 +480,37 @@ pars/parse_quotes.o: pars/parse_quotes.c execute/ pars/main.c pars/free_structur
 #  File has not been updated.
 
 # Not a target:
+execute/execute.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-21 10:31:47.415335371
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+execute/signal.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 pars/main.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-18 13:11:54.733837995
+#  Last modified 2022-06-21 10:29:38.420469248
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 pars/free_structure.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-18 10:17:57.848078992
+#  Last modified 2022-06-21 10:04:35.979682216
 #  File has been updated.
 #  Successfully updated.
 
-pars/parse_input.o: pars/parse_input.c execute/ pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'pars/parse_input'
-#  Last modified 2022-06-18 13:18:26.640758993
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 36):
-	$(CC) $(CFLAGS) -I $(INCLD) -c $< -o $(<:.c=.o)
+# Not a target:
+pars/parse_input.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 re: fclean all
 #  Phony target (prerequisite of .PHONY).
@@ -401,102 +518,177 @@ re: fclean all
 #  File does not exist.
 #  File has not been updated.
 
-pars/pars_utils3.o: pars/pars_utils3.c execute/ pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'pars/pars_utils3'
-#  Last modified 2022-06-18 13:18:26.800758993
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 36):
-	$(CC) $(CFLAGS) -I $(INCLD) -c $< -o $(<:.c=.o)
+# Not a target:
+pars/pars_utils3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 clean:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 39):
+#  recipe to execute (from 'Makefile', line 51):
 	rm -rf $(OBJ) 
+
+# Not a target:
+execute/pipex.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-21 10:04:35.979682216
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+execute/pwd.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-21 10:04:35.979682216
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+execute/cd.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-21 10:04:35.979682216
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
 pars/parse_double_quotes.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-18 13:04:08.782672981
+#  Last modified 2022-06-21 10:04:35.979682216
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 pars/initialize_structure.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-18 13:10:06.778016983
+#  Last modified 2022-06-21 10:04:35.979682216
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 pars/parse_pipe.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-18 10:16:31.774797987
+#  Last modified 2022-06-21 10:04:35.979682216
 #  File has been updated.
 #  Successfully updated.
 
-pars/pars_utils.o: pars/pars_utils.c execute/ pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c
+# Not a target:
+pars/pars_utils.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+execute/env.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+execute/echo.c:
 #  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'pars/pars_utils'
-#  Last modified 2022-06-18 13:18:26.760758993
+#  Last modified 2022-06-21 10:04:35.979682216
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 36):
-	$(CC) $(CFLAGS) -I $(INCLD) -c $< -o $(<:.c=.o)
+
+# Not a target:
+execute/exit.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 pars/parse_output.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-18 10:18:59.54032499
+#  Last modified 2022-06-21 10:04:35.979682216
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+execute/ft_split.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-21 10:04:35.979682216
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+execute/utils3.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-21 10:04:35.979682216
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+execute/export.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-21 10:04:35.979682216
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 pars/pars_utils2.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-18 13:16:24.495704996
+#  Last modified 2022-06-21 10:04:35.979682216
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 pars/parse_env.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-18 13:17:05.966781984
+#  Last modified 2022-06-21 10:04:35.979682216
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 pars/env_utils.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-18 13:17:43.137920976
+#  Last modified 2022-06-21 10:04:35.979682216
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+execute/utils.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-21 10:04:35.979682216
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 pars/parse_quotes.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-18 09:49:27.947305991
+#  Last modified 2022-06-21 10:04:35.979682216
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+execute/unset.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+execute/signal.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-21 10:33:13.68854032
 #  File has been updated.
 #  Successfully updated.
 
 # files hash-table stats:
-# Load=38/1024=4%, Rehash=0, Collisions=62/534=12%
+# Load=70/1024=7%, Rehash=0, Collisions=8/185=4%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 95 / storage = 1396 B / avg = 14 B
-# current buf: size = 8162 B / used = 1396 B / count = 95 / avg = 14 B
+# strcache buffers: 1 (0) / strings = 143 / storage = 1933 B / avg = 13 B
+# current buf: size = 8162 B / used = 1933 B / count = 143 / avg = 13 B
 
-# strcache performance: lookups = 567 / hit rate = 83%
+# strcache performance: lookups = 231 / hit rate = 38%
 # hash-table stats:
-# Load=95/8192=1%, Rehash=0, Collisions=3/567=1%
-# Finished Make data base on Sat Jun 18 13:18:43 2022
+# Load=143/8192=2%, Rehash=0, Collisions=3/231=1%
+# Finished Make data base on Tue Jun 21 10:33:40 2022
 
  

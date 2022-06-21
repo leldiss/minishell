@@ -6,7 +6,7 @@
 /*   By: sbendu <sbendu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/22 09:43:26 by sbendu            #+#    #+#             */
-/*   Updated: 2022/06/14 00:37:41 by sbendu           ###   ########.fr       */
+/*   Updated: 2022/06/21 10:50:54 by sbendu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,20 @@ static int	fd_open2(t_execute *cmds)
 	int	fd_pipe[2];
 	int	pid;
 
-	if (cmds->stdIn2 != 0)
+	if (cmds->stdin2 != 0)
 	{
 		if (pipe(fd_pipe) == -1)
 			return (-1);
 		pid = fork();
 		if (!pid)
 		{
-			write(fd_pipe[1], cmds->stdIn2, ft_strlen(cmds->stdIn2));
+			write(fd_pipe[1], cmds->stdin2, ft_strlen(cmds->stdin2));
 			close(fd_pipe[1]);
 			close(fd_pipe[0]);
-			free_all(cmds);
 			exit(0);
 		}
 		close(fd_pipe[1]);
-		waitpid(pid, &info->status, 0);
+		waitpid(pid, 0, 0);
 		dup2(fd_pipe[0], 1);
 		close(fd_pipe[0]);
 	}
@@ -40,25 +39,25 @@ static int	fd_open2(t_execute *cmds)
 
 static int	fd_open(t_execute *cmds, int fd_0, int fd_1, int *fd)
 {
-	if (cmds->stdIn != 0)
+	if (cmds->stdin != 0)
 	{
-		fd[0] = open(cmds->stdIn, O_RDONLY);
+		fd[0] = open(cmds->stdin, O_RDONLY);
 		if (fd[0] < 0)
-			return (ft_error(cmds->stdIn, ": No such file or dirctory"));
+			return (ft_error(cmds->stdin, ": No such file or dirctory"));
 		dup2(fd[0], 0);
 	}
-	if (ft_open2(cmds) == -1)
+	if (fd_open2(cmds) == -1)
 		return (-1);
 	else
 		dup2(fd_0, 0);
-	if (cmds->stdOut != 0)
+	if (cmds->stdout != 0)
 	{
-		fd[1] = open(cmds->stdIn, O_WRONLY | O_TRUNC | O_CREAT);
+		fd[1] = open(cmds->stdin, O_WRONLY | O_TRUNC | O_CREAT);
 		dup2(fd[1], 1);
 	}
-	else if (cmds->stdOut2 != 0)
+	else if (cmds->stdout2 != 0)
 	{
-		fd[1] = open(cmds->stdIn2, O_WRONLY | O_APPEND | O_CREAT);
+		fd[1] = open(cmds->stdin2, O_WRONLY | O_APPEND | O_CREAT);
 		dup2(fd[1], 1);
 	}
 	else
@@ -73,15 +72,20 @@ int	child_process(t_execute *cmds, int fd_0, int fd_1, t_pipex *pip)
 
 	if (fd_open(cmds, fd_0, fd_1, fd) == -1)
 		return (-1);
-	// builtins
+	dup2(fd_0, STDIN_FILENO);
+	dup2(fd_1, STDOUT_FILENO);
 	close_fd_pip(pip);
 	fd_close(fd[0], fd[1], cmds);
-	status = execve(cmds->arguments[0], cmds->arguments, pip->info->envp);
-	free_all(cmds);
-	free(pip->pid);
-	pip->pid = NULL;
-	free(pip->pipe_fd);
-	pip->pipe_fd = NULL;
+	status = ft_builtins(cmds, cmds->info);
+	if (status == 6)
+	{
+		status = execve(cmds->arguments[0], cmds->arguments, pip->info->envp);
+		if (status == 65280)
+		{
+			ft_error(cmds->command, ": command not found");
+			status = 127;
+		}
+	}
 	exit(status);
 }
 
@@ -113,17 +117,28 @@ void	parent_process(t_execute *cmds, t_pipex *pip)
 
 int	pipex(t_info *info, t_execute *cmds, t_pipex *pip)
 {
-	int	i;
+	int			i;
+	t_execute	*tmp;
 
 	i = -1;
+	tmp = cmds;
+	pip->info = info;
 	init_pip(pip);
 	info->pid_child = pip->pid;
 	parent_process(cmds, pip);
-	close_fd(pip);
+	close_fd_pip(pip);
 	while (++i <= pip->num_pipes)
 	{
+		handle_ctrl_c(5000, info->pid_child);
 		waitpid(pip->pid[i], &info->status, 0);
-		info->status = info->status % 256;
+		if (WIFSIGNALED(info->status))
+			info->status = WTERMSIG(info->status);
+		if (info->status == 65280)
+		{
+			ft_error(tmp->command, ": command not found");
+			info->status = 127;
+		}
+		tmp = tmp->next;
 	}
 	free(pip->pid);
 	pip->pid = NULL;

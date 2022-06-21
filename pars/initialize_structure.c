@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   initialize_structure.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: leldiss <leldiss@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: sbendu <sbendu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 10:24:52 by leldiss           #+#    #+#             */
-/*   Updated: 2022/06/18 13:10:06 by leldiss          ###   ########.fr       */
+/*   Updated: 2022/06/20 22:24:10 by sbendu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	init_info(t_info *info, char **envp)
 	info->envp = envp;
 	info->status = 0;
 	info->l_envp = first_lenvp();
+	info->pid_child = NULL;
 }
 
 t_execute	*first_execute(void)
@@ -33,6 +34,7 @@ t_execute	*first_execute(void)
 	tmp->stdin2 = NULL;
 	tmp->stdout = NULL;
 	tmp->stdout2 = NULL;
+	tmp->arguments = NULL;
 	return (tmp);
 }
 
