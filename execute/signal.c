@@ -6,16 +6,15 @@
 /*   By: leldiss <leldiss@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 11:26:10 by sbendu            #+#    #+#             */
-/*   Updated: 2022/06/21 13:10:06 by leldiss          ###   ########.fr       */
+/*   Updated: 2022/06/21 14:47:59 by leldiss          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "execute.h"
 
 void	display_prompt(void)
-{	
+{
 	write(1, "\n", 1);
-	printdir();
 	rl_replace_line("", 0);
 	rl_on_new_line();
 	rl_redisplay();

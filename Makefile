@@ -4,7 +4,7 @@ CC = gcc
 
 CFLAGS = -lreadline -g -Wall -Werror -Wextra
 
-INCLD =./execute/\
+INCLD = pars/minishell.h execute/execute.h
 
 SRC = ./pars/main.c\
 		./pars/free_structure.c\
@@ -41,11 +41,11 @@ OBJ = $(SRC:.c=.o)
 
 all:	$(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ) $(INCLD)
 	$(CC) $^ -o $@ $(CFLAGS) -o $(NAME)
 
 %.o: %.c  $(INCLD) $(SRC)
-	$(CC) $(CFLAGS) -I $(INCLD) -c $< -o $(<:.c=.o)
+	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
 clean:
 	rm -rf $(OBJ) 

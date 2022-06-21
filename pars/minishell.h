@@ -6,7 +6,7 @@
 /*   By: leldiss <leldiss@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 13:50:14 by leldiss           #+#    #+#             */
-/*   Updated: 2022/06/21 13:10:51 by leldiss          ###   ########.fr       */
+/*   Updated: 2022/06/21 14:30:31 by leldiss          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -155,6 +155,7 @@ char		*join_argument(char *str1, char *str2);
 void		start_parse(t_execute *info, char *line);
 
 // Мемная функция
-void		printdir(void);
+char		*join_prompt(char *str1, char *str2, int k);
+char		*printdir(void);
 
 #endif
