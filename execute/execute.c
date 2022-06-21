@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   execute.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: leldiss <leldiss@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: sbendu <sbendu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 19:30:59 by sbendu            #+#    #+#             */
-/*   Updated: 2022/06/21 11:27:47 by leldiss          ###   ########.fr       */
+/*   Updated: 2022/06/21 13:08:09 by sbendu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,13 +119,7 @@ void	execute(t_execute *cmds, t_info *info)
 	if (pip.num_pipes == 0)
 	{
 		no_pipe_exe(cmds, info);
-		if (WIFSIGNALED(info->status) != 0)
-			info->status = WTERMSIG(info->status);
-		if (info->status == 65280)
-		{
-			ft_error(cmds->command, ": command not found");
-			info->status = 127;
-		}
+		get_status(info, cmds);
 	}
 	else
 		pipex(info, cmds, &pip);

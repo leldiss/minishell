@@ -6,7 +6,7 @@
 /*   By: leldiss <leldiss@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 11:26:10 by sbendu            #+#    #+#             */
-/*   Updated: 2022/06/21 11:38:02 by leldiss          ###   ########.fr       */
+/*   Updated: 2022/06/21 13:10:06 by leldiss          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 void	display_prompt(void)
 {	
 	write(1, "\n", 1);
-	printDir();
+	printdir();
 	rl_replace_line("", 0);
 	rl_on_new_line();
 	rl_redisplay();
 }
 
-void make_signals_work(void)
+void	make_signals_work(void)
 {
 	signal(SIGINT, sighandler);
 	signal(SIGQUIT, SIG_IGN);
@@ -40,7 +40,7 @@ void	sighandler(int signal)
 void	handle_ctrl_c(int signal, int *ptr)
 {
 	static pid_t	*saved = NULL;
-	int	i;
+	int				i;
 
 	i = -1;
 	if (signal == 5000)
