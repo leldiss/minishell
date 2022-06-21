@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   echo.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbendu <sbendu@student.42.fr>              +#+  +:+       +#+        */
+/*   By: leldiss <leldiss@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 20:21:51 by sbendu            #+#    #+#             */
-/*   Updated: 2022/06/21 13:31:25 by sbendu           ###   ########.fr       */
+/*   Updated: 2022/06/21 20:05:50 by leldiss          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,8 @@ int	echo(t_execute *cmds, t_info *info)
 	len = ft_arg_len(cmds->arguments);
 	if (cmds->option)
 	{
-		if (ft_strncmp(cmds->option, "-n", 2) == 0)
+		if (cmds->option[0] == '-' && cmds->option[1]
+			== 'n' && cmds->option[2] == 0)
 			flag = 1;
 	}
 	if (flag == 1)

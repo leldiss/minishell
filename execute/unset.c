@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   unset.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbendu <sbendu@student.42.fr>              +#+  +:+       +#+        */
+/*   By: leldiss <leldiss@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 10:53:03 by sbendu            #+#    #+#             */
-/*   Updated: 2022/06/20 20:21:56 by sbendu           ###   ########.fr       */
+/*   Updated: 2022/06/21 20:48:30 by leldiss          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,22 +17,20 @@ int	check_first(t_info *info, char *key)
 	t_list	*tmp;
 	t_list	*head;
 
-	info->l_envp = info->l_envp->head;
-	if (ft_strncmp(info->l_envp->key, key, ft_strlen(key)) == 0)
+	key = key;
+	tmp = info->l_envp;
+	info->l_envp = info->l_envp->next;
+	head = info->l_envp;
+	free(tmp->key);
+	free(tmp->value);
+	free(tmp);
+	while (info->l_envp->next)
 	{
-		tmp = info->l_envp;
+		info->l_envp->head = head;
 		info->l_envp = info->l_envp->next;
-		head = info->l_envp;
-		free(tmp->key);
-		free(tmp->value);
-		free(tmp);
-		while (info->l_envp->next)
-		{
-			info->l_envp->head = head;
-			info->l_envp = info->l_envp->next;
-		}
-		info->l_envp = info->l_envp->head;
 	}
+	info->l_envp->head = head;
+	info->l_envp = info->l_envp->head;
 	return (1);
 }
 
@@ -40,23 +38,28 @@ static void	check_list(t_info *info, char *key)
 {
 	t_list	*tmp;
 
-	while (info->l_envp->next)
+	if (string_compare(info->l_envp->key, key))
+		check_first(info, key);
+	else
 	{
-		if (info->l_envp == info->l_envp->head)
-			check_first(info, key);
-		else if (ft_strncmp(info->l_envp->next->key, key, ft_strlen(key)) == 0)
+		while (info->l_envp->next)
 		{
-			tmp = info->l_envp->next;
-			if (info->l_envp->next->next)
-				info->l_envp->next = info->l_envp->next->next;
-			else
-				info->l_envp->next = NULL;
-			free(tmp->key);
-			free(tmp->value);
-			free(tmp);
-		}
-		if (info->l_envp->next)
+			if (info->l_envp->next->key)
+			{
+				if (string_compare(info->l_envp->next->key, key))
+				{
+					tmp = info->l_envp->next;
+					if (info->l_envp->next->next)
+						info->l_envp->next = info->l_envp->next->next;
+					else
+						info->l_envp->next = NULL;
+					free(tmp->key);
+					free(tmp->value);
+					free(tmp);
+				}
+			}
 			info->l_envp = info->l_envp->next;
+		}
 	}
 }
 
@@ -64,12 +67,16 @@ int	unset(t_execute *cmds, t_info *info)
 {
 	int		i;
 
-	i = 1;
-	while (cmds->arguments[i])
+	i = 0;
+	while (cmds->arguments[++i])
 	{
+		if (!cmds->arguments[i])
+			continue ;
+		if (cmds->arguments[i][0] == 0)
+			continue ;
 		info->l_envp = info->l_envp->head;
 		check_list(info, cmds->arguments[i]);
-		i++;
+		info->l_envp = info->l_envp->head;
 	}
 	return (0);
 }

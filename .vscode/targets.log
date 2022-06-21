@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Jun 21 15:09:50 2022
+# Make data base, printed on Tue Jun 21 20:35:16 2022
 
 # Variables
 
@@ -31,7 +31,7 @@ VSCODE_LOG_NATIVE = false
 # automatic
 @F = $(notdir $@)
 # makefile
-CURDIR := /home/leldiss/minishell
+CURDIR := /home/leldiss/minshell
 # makefile
 SHELL = /bin/sh
 # environment
@@ -59,7 +59,7 @@ XDG_RUNTIME_DIR = /mnt/wslg/runtime-dir
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-e8da1c8f-be97-4d83-822a-eafd0a57ddea.sock
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-002684a3-1407-4ba3-9d78-173ae66f7ff8.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -71,7 +71,7 @@ DISPLAY = :0
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-PWD = /home/leldiss/minishell
+PWD = /home/leldiss/minshell
 # default
 .LOADED := 
 # environment
@@ -179,9 +179,9 @@ WSL_DISTRO_NAME = Ubuntu
 
 # Directories
 
-# . (device 2080, inode 96865): 8 files, no impossibilities.
-# pars (device 2080, inode 62450): 31 files, no impossibilities so far.
-# execute (device 2080, inode 11223): 33 files, no impossibilities so far.
+# . (device 2080, inode 57994): 8 files, no impossibilities.
+# pars (device 2080, inode 62451): 31 files, no impossibilities so far.
+# execute (device 2080, inode 62429): 33 files, no impossibilities so far.
 
 # 72 files, no impossibilities in 3 directories.
 
@@ -198,7 +198,7 @@ WSL_DISTRO_NAME = Ubuntu
 execute/builtinsutils.o: execute/builtinsutils.c pars/minishell.h execute/execute.h pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'execute/builtinsutils'
-#  Last modified 2022-06-21 15:09:03.145523167
+#  Last modified 2022-06-21 20:34:37.249351184
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 48):
@@ -207,21 +207,21 @@ execute/builtinsutils.o: execute/builtinsutils.c pars/minishell.h execute/execut
 # Not a target:
 pars/parse_input.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 13:04:02.079538156
+#  Last modified 2022-06-21 20:01:32.780278124
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 pars/pars_utils3.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 13:02:45.735815343
+#  Last modified 2022-06-21 20:01:32.780278124
 #  File has been updated.
 #  Successfully updated.
 
 execute/utils2.o: execute/utils2.c pars/minishell.h execute/execute.h pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'execute/utils2'
-#  Last modified 2022-06-21 15:09:03.105523166
+#  Last modified 2022-06-21 20:34:37.209351183
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 48):
@@ -238,7 +238,7 @@ all: minishell
 # Not a target:
 pars/pars_utils.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 13:02:45.735815343
+#  Last modified 2022-06-21 20:01:32.780278124
 #  File has been updated.
 #  Successfully updated.
 
@@ -250,31 +250,31 @@ pars/pars_utils.c:
 # Not a target:
 execute/env.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 13:03:37.008300224
+#  Last modified 2022-06-21 20:01:32.780278124
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 execute/exit.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 13:03:37.008300224
+#  Last modified 2022-06-21 20:01:32.780278124
 #  File has been updated.
 #  Successfully updated.
 
 pars/pars_utils2.o: pars/pars_utils2.c pars/minishell.h execute/execute.h pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'pars/pars_utils2'
-#  Last modified 2022-06-21 15:09:03.005523165
+#  Last modified 2022-06-21 20:34:37.119351182
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 48):
 	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
 execute/path.o: execute/path.c pars/minishell.h execute/execute.h pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
+ 
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'execute/path'
-#  Last modified 2022-06-21 15:09:03.285523169
- 
+#  Last modified 2022-06-21 20:34:37.399351186
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 48):
@@ -283,7 +283,7 @@ execute/path.o: execute/path.c pars/minishell.h execute/execute.h pars/main.c pa
 execute/execute.o: execute/execute.c pars/minishell.h execute/execute.h pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'execute/execute'
-#  Last modified 2022-06-21 15:09:03.045523166
+#  Last modified 2022-06-21 20:34:37.159351182
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 48):
@@ -292,21 +292,21 @@ execute/execute.o: execute/execute.c pars/minishell.h execute/execute.h pars/mai
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 15:09:00.105523125
+#  Last modified 2022-06-21 20:01:32.780278124
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 execute/unset.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 13:03:37.008300224
+#  Last modified 2022-06-21 20:33:15.516087297
 #  File has been updated.
 #  Successfully updated.
 
 pars/main.o: pars/main.c pars/minishell.h execute/execute.h pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'pars/main'
-#  Last modified 2022-06-21 15:09:02.755523162
+#  Last modified 2022-06-21 20:34:36.879351179
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 48):
@@ -315,7 +315,7 @@ pars/main.o: pars/main.c pars/minishell.h execute/execute.h pars/main.c pars/fre
 pars/free_structure.o: pars/free_structure.c pars/minishell.h execute/execute.h pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'pars/free_structure'
-#  Last modified 2022-06-21 15:09:02.785523162
+#  Last modified 2022-06-21 20:34:36.899351179
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 48):
@@ -324,7 +324,7 @@ pars/free_structure.o: pars/free_structure.c pars/minishell.h execute/execute.h 
 pars/start_parse.o: pars/start_parse.c pars/minishell.h execute/execute.h pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'pars/start_parse'
-#  Last modified 2022-06-21 15:09:02.945523164
+#  Last modified 2022-06-21 20:34:37.059351181
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 48):
@@ -333,7 +333,7 @@ pars/start_parse.o: pars/start_parse.c pars/minishell.h execute/execute.h pars/m
 execute/pipex.o: execute/pipex.c pars/minishell.h execute/execute.h pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'execute/pipex'
-#  Last modified 2022-06-21 15:09:03.065523166
+#  Last modified 2022-06-21 20:34:37.179351183
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 48):
@@ -342,7 +342,7 @@ execute/pipex.o: execute/pipex.c pars/minishell.h execute/execute.h pars/main.c 
 execute/pwd.o: execute/pwd.c pars/minishell.h execute/execute.h pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'execute/pwd'
-#  Last modified 2022-06-21 15:09:03.125523167
+#  Last modified 2022-06-21 20:34:37.229351183
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 48):
@@ -351,14 +351,14 @@ execute/pwd.o: execute/pwd.c pars/minishell.h execute/execute.h pars/main.c pars
 # Not a target:
 execute/builtinsutils.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 13:03:37.008300224
+#  Last modified 2022-06-21 20:01:32.780278124
 #  File has been updated.
 #  Successfully updated.
 
 execute/cd.o: execute/cd.c pars/minishell.h execute/execute.h pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'execute/cd'
-#  Last modified 2022-06-21 15:09:03.155523167
+#  Last modified 2022-06-21 20:34:37.269351184
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 48):
@@ -367,7 +367,7 @@ execute/cd.o: execute/cd.c pars/minishell.h execute/execute.h pars/main.c pars/f
 pars/parse_double_quotes.o: pars/parse_double_quotes.c pars/minishell.h execute/execute.h pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'pars/parse_double_quotes'
-#  Last modified 2022-06-21 15:09:02.825523163
+#  Last modified 2022-06-21 20:34:36.939351179
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 48):
@@ -376,21 +376,21 @@ pars/parse_double_quotes.o: pars/parse_double_quotes.c pars/minishell.h execute/
 # Not a target:
 execute/utils2.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 13:03:37.008300224
+#  Last modified 2022-06-21 20:01:32.780278124
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 pars/minishell.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 14:41:58.94994711
+#  Last modified 2022-06-21 20:01:32.780278124
 #  File has been updated.
 #  Successfully updated.
 
 pars/initialize_structure.o: pars/initialize_structure.c pars/minishell.h execute/execute.h pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'pars/initialize_structure'
-#  Last modified 2022-06-21 15:09:02.795523162
+#  Last modified 2022-06-21 20:34:36.919351179
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 48):
@@ -399,7 +399,7 @@ pars/initialize_structure.o: pars/initialize_structure.c pars/minishell.h execut
 pars/parse_pipe.o: pars/parse_pipe.c pars/minishell.h execute/execute.h pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'pars/parse_pipe'
-#  Last modified 2022-06-21 15:09:02.905523164
+#  Last modified 2022-06-21 20:34:37.01935118
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 48):
@@ -407,7 +407,7 @@ pars/parse_pipe.o: pars/parse_pipe.c pars/minishell.h execute/execute.h pars/mai
 
 minishell: pars/main.o pars/free_structure.o pars/initialize_structure.o pars/parse_double_quotes.o pars/parse_env.o pars/parse_input.o pars/parse_output.o pars/parse_pipe.o pars/parse_quotes.o pars/start_parse.o pars/env_utils.o pars/pars_utils.o pars/pars_utils2.o pars/pars_utils3.o execute/execute.o execute/pipex.o execute/utils.o execute/utils2.o execute/pwd.o execute/builtinsutils.o execute/cd.o execute/echo.o execute/env.o execute/exit.o execute/export.o execute/unset.o execute/signal.o execute/path.o execute/utils3.o execute/ft_split.o pars/minishell.h execute/execute.h
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-21 15:09:03.425523171
+#  Last modified 2022-06-21 20:34:37.529351187
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 45):
@@ -416,7 +416,7 @@ minishell: pars/main.o pars/free_structure.o pars/initialize_structure.o pars/pa
 execute/echo.o: execute/echo.c pars/minishell.h execute/execute.h pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'execute/echo'
-#  Last modified 2022-06-21 15:09:03.175523167
+#  Last modified 2022-06-21 20:34:37.289351184
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 48):
@@ -425,7 +425,7 @@ execute/echo.o: execute/echo.c pars/minishell.h execute/execute.h pars/main.c pa
 pars/parse_output.o: pars/parse_output.c pars/minishell.h execute/execute.h pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'pars/parse_output'
-#  Last modified 2022-06-21 15:09:02.885523163
+#  Last modified 2022-06-21 20:34:36.99935118
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 48):
@@ -434,7 +434,7 @@ pars/parse_output.o: pars/parse_output.c pars/minishell.h execute/execute.h pars
 execute/ft_split.o: execute/ft_split.c pars/minishell.h execute/execute.h pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'execute/ft_split'
-#  Last modified 2022-06-21 15:09:03.325523169
+#  Last modified 2022-06-21 20:34:37.439351186
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 48):
@@ -451,7 +451,7 @@ fclean: clean
 execute/utils3.o: execute/utils3.c pars/minishell.h execute/execute.h pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'execute/utils3'
-#  Last modified 2022-06-21 15:09:03.305523169
+#  Last modified 2022-06-21 20:34:37.419351186
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 48):
@@ -460,7 +460,7 @@ execute/utils3.o: execute/utils3.c pars/minishell.h execute/execute.h pars/main.
 execute/export.o: execute/export.c pars/minishell.h execute/execute.h pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'execute/export'
-#  Last modified 2022-06-21 15:09:03.235523168
+#  Last modified 2022-06-21 20:34:37.339351185
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 48):
@@ -469,14 +469,14 @@ execute/export.o: execute/export.c pars/minishell.h execute/execute.h pars/main.
 # Not a target:
 pars/start_parse.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 13:02:45.735815343
+#  Last modified 2022-06-21 20:01:32.780278124
 #  File has been updated.
 #  Successfully updated.
 
 pars/parse_env.o: pars/parse_env.c pars/minishell.h execute/execute.h pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'pars/parse_env'
-#  Last modified 2022-06-21 15:09:02.845523163
+#  Last modified 2022-06-21 20:34:36.95935118
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 48):
@@ -485,14 +485,14 @@ pars/parse_env.o: pars/parse_env.c pars/minishell.h execute/execute.h pars/main.
 # Not a target:
 execute/path.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 13:03:37.008300224
+#  Last modified 2022-06-21 20:01:32.780278124
 #  File has been updated.
 #  Successfully updated.
 
 pars/env_utils.o: pars/env_utils.c pars/minishell.h execute/execute.h pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'pars/env_utils'
-#  Last modified 2022-06-21 15:09:02.965523164
+#  Last modified 2022-06-21 20:34:37.079351181
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 48):
@@ -501,7 +501,7 @@ pars/env_utils.o: pars/env_utils.c pars/minishell.h execute/execute.h pars/main.
 execute/utils.o: execute/utils.c pars/minishell.h execute/execute.h pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'execute/utils'
-#  Last modified 2022-06-21 15:09:03.085523166
+#  Last modified 2022-06-21 20:34:37.199351183
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 48):
@@ -510,7 +510,7 @@ execute/utils.o: execute/utils.c pars/minishell.h execute/execute.h pars/main.c 
 pars/parse_quotes.o: pars/parse_quotes.c pars/minishell.h execute/execute.h pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'pars/parse_quotes'
-#  Last modified 2022-06-21 15:09:02.915523164
+#  Last modified 2022-06-21 20:34:37.039351181
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 48):
@@ -525,38 +525,38 @@ pars/parse_quotes.o: pars/parse_quotes.c pars/minishell.h execute/execute.h pars
 # Not a target:
 execute/execute.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 13:03:37.008300224
+#  Last modified 2022-06-21 20:01:32.780278124
 #  File has been updated.
 #  Successfully updated.
 
 execute/signal.o: execute/signal.c pars/minishell.h execute/execute.h pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'execute/signal'
-#  Last modified 2022-06-21 15:09:03.275523169
+#  Last modified 2022-06-21 20:34:37.379351185
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 48):
 	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+ 
 
 # Not a target:
 pars/main.c:
 #  Implicit rule search has been done.
- 
-#  Last modified 2022-06-21 15:08:48.774407381
+#  Last modified 2022-06-21 20:01:32.780278124
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 pars/free_structure.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 13:04:56.271988077
+#  Last modified 2022-06-21 20:01:32.780278124
 #  File has been updated.
 #  Successfully updated.
 
 pars/parse_input.o: pars/parse_input.c pars/minishell.h execute/execute.h pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'pars/parse_input'
-#  Last modified 2022-06-21 15:09:02.865523163
+#  Last modified 2022-06-21 20:34:36.97935118
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 48):
@@ -571,7 +571,7 @@ re: fclean all
 pars/pars_utils3.o: pars/pars_utils3.c pars/minishell.h execute/execute.h pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'pars/pars_utils3'
-#  Last modified 2022-06-21 15:09:03.015523165
+#  Last modified 2022-06-21 20:34:37.129351182
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 48):
@@ -588,56 +588,56 @@ clean:
 # Not a target:
 execute/pipex.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 13:03:37.008300224
+#  Last modified 2022-06-21 20:01:32.780278124
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 execute/pwd.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 13:03:37.008300224
+#  Last modified 2022-06-21 20:01:32.780278124
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 execute/cd.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 13:03:37.008300224
+#  Last modified 2022-06-21 20:01:32.780278124
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 pars/parse_double_quotes.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 13:02:45.735815343
+#  Last modified 2022-06-21 20:01:32.780278124
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 execute/execute.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 13:03:37.008300224
+#  Last modified 2022-06-21 20:01:32.780278124
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 pars/initialize_structure.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 13:02:45.735815343
+#  Last modified 2022-06-21 20:01:32.780278124
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 pars/parse_pipe.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 13:02:45.735815343
+#  Last modified 2022-06-21 20:01:32.780278124
 #  File has been updated.
 #  Successfully updated.
 
 pars/pars_utils.o: pars/pars_utils.c pars/minishell.h execute/execute.h pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'pars/pars_utils'
-#  Last modified 2022-06-21 15:09:02.985523165
+#  Last modified 2022-06-21 20:34:37.099351182
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 48):
@@ -646,7 +646,7 @@ pars/pars_utils.o: pars/pars_utils.c pars/minishell.h execute/execute.h pars/mai
 execute/env.o: execute/env.c pars/minishell.h execute/execute.h pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'execute/env'
-#  Last modified 2022-06-21 15:09:03.195523168
+#  Last modified 2022-06-21 20:34:37.299351184
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 48):
@@ -655,14 +655,14 @@ execute/env.o: execute/env.c pars/minishell.h execute/execute.h pars/main.c pars
 # Not a target:
 execute/echo.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 13:03:37.008300224
+#  Last modified 2022-06-21 20:05:50.03109936
 #  File has been updated.
 #  Successfully updated.
 
 execute/exit.o: execute/exit.c pars/minishell.h execute/execute.h pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'execute/exit'
-#  Last modified 2022-06-21 15:09:03.215523168
+#  Last modified 2022-06-21 20:34:37.319351185
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 48):
@@ -671,71 +671,70 @@ execute/exit.o: execute/exit.c pars/minishell.h execute/execute.h pars/main.c pa
 # Not a target:
 pars/parse_output.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 13:02:45.735815343
+#  Last modified 2022-06-21 20:01:32.780278124
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 execute/ft_split.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 13:03:37.008300224
+#  Last modified 2022-06-21 20:01:32.780278124
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 execute/utils3.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 13:03:37.008300224
+#  Last modified 2022-06-21 20:01:32.780278124
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 execute/export.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 13:03:37.008300224
+#  Last modified 2022-06-21 20:01:32.780278124
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 pars/pars_utils2.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 13:02:45.735815343
+#  Last modified 2022-06-21 20:01:32.780278124
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 pars/parse_env.c:
 #  Implicit rule search has been done.
- 
-#  Last modified 2022-06-21 13:02:45.735815343
+#  Last modified 2022-06-21 20:01:32.780278124
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 pars/env_utils.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 13:02:45.735815343
+#  Last modified 2022-06-21 20:01:32.780278124
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 execute/utils.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 13:03:37.008300224
+#  Last modified 2022-06-21 20:01:32.780278124
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 pars/parse_quotes.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 13:02:45.735815343
+#  Last modified 2022-06-21 20:01:32.780278124
 #  File has been updated.
 #  Successfully updated.
 
 execute/unset.o: execute/unset.c pars/minishell.h execute/execute.h pars/main.c pars/free_structure.c pars/initialize_structure.c pars/parse_double_quotes.c pars/parse_env.c pars/parse_input.c pars/parse_output.c pars/parse_pipe.c pars/parse_quotes.c pars/start_parse.c pars/env_utils.c pars/pars_utils.c pars/pars_utils2.c pars/pars_utils3.c execute/execute.c execute/pipex.c execute/utils.c execute/utils2.c execute/pwd.c execute/builtinsutils.c execute/cd.c execute/echo.c execute/env.c execute/exit.c execute/export.c execute/unset.c execute/signal.c execute/path.c execute/utils3.c execute/ft_split.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'execute/unset'
-#  Last modified 2022-06-21 15:09:03.255523168
+#  Last modified 2022-06-21 20:34:37.359351185
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 48):
@@ -744,7 +743,7 @@ execute/unset.o: execute/unset.c pars/minishell.h execute/execute.h pars/main.c 
 # Not a target:
 execute/signal.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-21 14:47:59.424220117
+#  Last modified 2022-06-21 20:01:32.780278124
 #  File has been updated.
 #  Successfully updated.
 
@@ -762,6 +761,6 @@ execute/signal.c:
 # strcache performance: lookups = 2179 / hit rate = 92%
 # hash-table stats:
 # Load=173/8192=2%, Rehash=0, Collisions=5/2179=0%
-# Finished Make data base on Tue Jun 21 15:09:50 2022
+# Finished Make data base on Tue Jun 21 20:35:16 2022
 
  
